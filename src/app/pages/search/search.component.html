@@ -1,0 +1,5 @@
+<input type="text" [formControl]="searchFormControl"/>
+
+<div *ngFor="let book of (searchResult$ | async)?.items">
+    {{book?.volumeInfo?.title}}
+</div>
