@@ -1,5 +1,7 @@
-<input type="text" [formControl]="searchFormControl"/>
+<input type="text" [formControl]="searchFormControl" />
 
-<div *ngFor="let book of (searchResult$ | async)?.items">
-    {{book?.volumeInfo?.title}}
+<div class="books-wrapper">
+    <div *ngFor="let book of (searchResult$ | async)?.items" class="book-item">
+        <app-book [book]="book"></app-book>
+    </div>
 </div>

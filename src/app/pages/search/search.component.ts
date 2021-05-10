@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
-import { Observable, of, Subscription } from 'rxjs';
-import { catchError, debounceTime, switchMap } from 'rxjs/operators';
+import { Observable, of } from 'rxjs';
+import { debounceTime, switchMap } from 'rxjs/operators';
 import { GoogleBooksResponse } from 'src/app/models/googleBooksResponse';
 import { SearchService } from 'src/app/services/search.service'
 
@@ -15,7 +15,6 @@ export class SearchComponent implements OnInit {
 
   searchFormControl: FormControl;
   searchResult$ = new Observable<GoogleBooksResponse>();
-  searchResultSubscription: Subscription;
 
   constructor(
     private searchService: SearchService
