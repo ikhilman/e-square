@@ -29,7 +29,7 @@ export class StorageService {
     const savedBooks: IKeyValue<BookItem> = await this.getSavedBooks().pipe(take(1)).toPromise();
     debugger
     if (savedBooks[book.id]) {
-      savedBooks[book.id] = null;
+      delete savedBooks[book.id];
     } else {
       savedBooks[book.id] = book;
     }

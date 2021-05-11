@@ -3,7 +3,7 @@
   <input type="text" [formControl]="searchFormControl" placeholder="Enter book name.."/>
 
   <div class="books-wrapper">
-    <div *ngFor="let book of (searchResult$ | async)?.items" class="book-item">
+    <div *ngFor="let book of (searchResult$ | async)?.items | slice:0:20;" class="book-item">
       <app-book [book]="book" [saved]="savesBooksMap[book.id]" (onBookClick)="onBookClick($event)" (toggleSaveStatus)="toggleSaveStatus($event)"></app-book>
     </div>
   </div>
