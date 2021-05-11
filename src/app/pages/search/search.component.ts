@@ -7,7 +7,6 @@ import { IKeyValue } from 'src/app/models/iKeyValue';
 import { SearchService } from 'src/app/services/search.service'
 import { StorageService } from 'src/app/services/storage.service';
 
-
 @Component({
   selector: 'app-search',
   templateUrl: './search.component.html',
@@ -17,7 +16,6 @@ export class SearchComponent implements OnInit, OnDestroy {
 
   savesBooksMap: IKeyValue<BookItem> = {};
   savedBooksSubscription: Subscription;
-
   searchFormControl: FormControl;
   searchResult$ = new Observable<GoogleBooksResponse>();
   currentBook: BookItem;
@@ -63,7 +61,6 @@ export class SearchComponent implements OnInit, OnDestroy {
     this.savedBooksSubscription = this.storageService.getSavedBooks()
       .subscribe(books => this.savesBooksMap = books);
   }
-
 
   ngOnDestroy(): void {
     this.savedBooksSubscription?.unsubscribe();

@@ -6,20 +6,13 @@ import { BookItem } from '../../../models/googleBooksResponse'
   templateUrl: './book-info.component.html',
   styleUrls: ['./book-info.component.scss']
 })
-export class BookInfoComponent implements OnInit {
+export class BookInfoComponent {
 
   @Input() book: BookItem;
 
   @Output() dismissDialog = new EventEmitter<void>();
 
-  constructor() { }
-
-  ngOnInit(): void {
-
-  }
-
   onDialogDismiss() {
     this.dismissDialog.emit();
   }
-
 }
