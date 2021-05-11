@@ -15,6 +15,7 @@ export class BookInfoComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+
   }
 
   onDialogDismiss() {

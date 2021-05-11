@@ -27,7 +27,6 @@ export class StorageService {
 
   async toggleBookStatus(book: BookItem) {
     const savedBooks: IKeyValue<BookItem> = await this.getSavedBooks().pipe(take(1)).toPromise();
-    debugger
     if (savedBooks[book.id]) {
       delete savedBooks[book.id];
     } else {
