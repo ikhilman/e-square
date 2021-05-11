@@ -14,6 +14,6 @@ export class SearchService {
   ) { }
 
   getResultByQuery(query: string): Observable<GoogleBooksResponse> {
-    return this.http.get<GoogleBooksResponse>(`${environment.booksApi}?q=${query}+intitle`);
+    return this.http.get<GoogleBooksResponse>(`${environment.booksApi}?q=${query}`);
   }
 }

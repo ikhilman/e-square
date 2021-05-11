@@ -1,29 +1,8 @@
-<!-- <div class="book-item">
-
-    <div class="book-image">
-        <img [src]="book.volumeInfo.imageLinks?.smallThumbnail" alt="">
-    </div>
-
-    <div class="book-text">
-        {{book.volumeInfo.title}}
-    </div>
-
-    <div class="button-wrapper">
-        <button type="button" (click)="toggleBookStatus()">Bookmark</button>
-    </div>
-
-</div> -->
-
 <div class="card">
-    <img [src]="book.volumeInfo.imageLinks?.smallThumbnail" alt="Avatar" style="width:100%">
-    <div class="container">
-      <!-- <h4><b>John Doe</b></h4> -->
-      <p>{{book.volumeInfo.title}}</p>
-    </div>
-    <div class="button-wrapper">
-        <button type="button" (click)="toggleBookStatus()">Bookmark</button>
-    </div>
-
+  <img [src]="book.volumeInfo.imageLinks?.smallThumbnail" alt="Avatar" style="width:100%">
+  <p>{{book.volumeInfo.title}}</p>
+  <div class="button-wrapper">
+    <button class="btn" type="button" (click)="toggleBookStatus()">Add to cart</button>
   </div>
 
-  
+</div>

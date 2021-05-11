@@ -1,13 +1,10 @@
 <div class="container">
-    <div class="form-wrapper">
-        <div class="label-wrapper">
-            <label for="fname">User Name</label>
-        </div>
+    <div class="form-wrapper">        
         <div class="input-wrapper">
-            <input type="text"  [formControl]="userNameFormControl" (keydown.enter)="onSubmit()" id="fname" name="firstname" placeholder="User Name..">
+            <input type="text" [formControl]="userNameFormControl" (keydown.enter)="onSubmit()" id="fname" name="firstname" placeholder="User Name..">
         </div>
     </div>
     <div class="button-wrapper">
-        <button type="button" (click)="onSubmit()">Submit</button>
+        <button class="btn" type="button" (click)="onSubmit()">Submit</button>
     </div>
 </div>

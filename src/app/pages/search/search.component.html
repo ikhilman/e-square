@@ -1,7 +1,17 @@
-<input type="text" [formControl]="searchFormControl" />
+<div class="container search-wrapper">
+    <h1 class="title">Search Page</h1>
+  <input type="text" [formControl]="searchFormControl" placeholder="Enter book name.."/>
 
-<div class="books-wrapper">
+  <div class="books-wrapper">
     <div *ngFor="let book of (searchResult$ | async)?.items" class="book-item">
-        <app-book [book]="book"></app-book>
+      <app-book [book]="book"></app-book>
     </div>
+  </div>
+
+  <!--DIALOG-->
+  <div *ngIf="false" class="dialog-wrapper">
+      <h2>I am a dialog</h2>
+  </div>
 </div>
+
+
