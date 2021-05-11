@@ -11,6 +11,10 @@ const routes: Routes = [
     loadChildren: () => import('./pages/search/search.module').then(m => m.SearchModule)
   },
   {
+    path: 'wish-list',
+    loadChildren: () => import('./pages/wish-list/wish-list.module').then(m => m.WishListModule)
+  },
+  {
     path: '**',
     redirectTo: 'welcome'
   }

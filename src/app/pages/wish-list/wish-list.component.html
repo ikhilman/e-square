@@ -1,0 +1,12 @@
+<div class="container wish-wrapper">
+
+    <h1 class="title">Wish List</h1>
+
+    <div class="books-wrapper">
+        <div *ngFor="let book of (books$ | async)" class="book-item">
+            <app-book [book]="book" [saved]="book" (toggleSaveStatus)="toggleSaveStatus($event)">
+            </app-book>
+        </div>
+    </div>
+
+</div>
