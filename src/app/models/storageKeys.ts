@@ -1,3 +1,4 @@
 export enum StorageKeys {
-    CurrentUser = "CurrentUser"
+    CurrentUser = "CurrentUser",
+    SavedBooks = 'SavedBooks'
 }

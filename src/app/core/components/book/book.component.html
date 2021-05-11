@@ -1,8 +1,9 @@
 <div class="card">
-  <img [src]="book.volumeInfo.imageLinks?.smallThumbnail" alt="Avatar" style="width:100%">
-  <p>{{book.volumeInfo.title}}</p>
-  <div class="button-wrapper">
-    <button class="btn" type="button" (click)="toggleBookStatus()">Add to cart</button>
+  <div (click)="bookInfoClick()">
+    <img [src]="book.volumeInfo.imageLinks?.smallThumbnail" alt="Avatar" style="width:100%">
+    <p>{{book.volumeInfo.title}}</p>
   </div>
-
+  <div class="button-wrapper">
+    <button class="btn" type="button" (click)="toggleBookStatus()">{{saved?'Delete':'Save'}}</button>
+  </div>
 </div>

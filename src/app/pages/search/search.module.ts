@@ -5,10 +5,11 @@ import { SearchRoutingModule } from './search-routing.module';
 import { SearchComponent } from './search.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CoreModule } from 'src/app/core/core.module';
+import { BookInfoComponent } from './book-info/book-info.component';
 
 
 @NgModule({
-  declarations: [SearchComponent],
+  declarations: [SearchComponent, BookInfoComponent],
   imports: [
     CommonModule,
     SearchRoutingModule,

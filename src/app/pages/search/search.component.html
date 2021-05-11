@@ -4,13 +4,13 @@
 
   <div class="books-wrapper">
     <div *ngFor="let book of (searchResult$ | async)?.items" class="book-item">
-      <app-book [book]="book"></app-book>
+      <app-book [book]="book" [saved]="savesBooksMap[book.id]" (onBookClick)="onBookClick($event)" (toggleSaveStatus)="toggleSaveStatus($event)"></app-book>
     </div>
   </div>
 
   <!--DIALOG-->
-  <div *ngIf="false" class="dialog-wrapper">
-      <h2>I am a dialog</h2>
+  <div *ngIf="currentBook" class="dialog-wrapper">
+      <app-book-info [book]="currentBook" (dismissDialog)="dismissDialog()"></app-book-info>
   </div>
 </div>
 

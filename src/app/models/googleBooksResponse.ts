@@ -3,6 +3,7 @@ export interface GoogleBooksResponse {
 }
 
 export interface BookItem {
+    id: string;
     volumeInfo: VolumeInfo;
 }
 
