@@ -33,7 +33,6 @@ export class WishListComponent implements OnInit {
   subscribeToSavedBooks(): Observable<BookItem[]> {
     return this.storageService.getSavedBooks()
       .pipe(map(data => {
-        debugger
         return Object.values(data)
       }));
   }

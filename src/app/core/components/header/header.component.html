@@ -1,4 +1,6 @@
 <div class="header">
     <a router-link="/" class="logo">e-square</a>
-    <div class="user-name" *ngIf="(currentUser$ | async)?.userName">Hello {{(currentUser$ | async)?.userName}}</div>
+    <div class="user-name" *ngIf="(currentUser$ | async)?.userName">
+        <button type="link" (click)="toWishList()">Wishlist</button>
+        Hello {{(currentUser$ | async)?.userName}}</div>
 </div>
